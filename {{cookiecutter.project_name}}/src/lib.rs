@@ -40,6 +40,7 @@
 //! [crates.io]: https://crates.io/crates/{{cookiecutter.project_name}})
 //! [`README.md`]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}})
 //!
+
 #[cfg(test)]
 mod tests {
     #[test]

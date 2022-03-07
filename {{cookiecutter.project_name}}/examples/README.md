@@ -36,7 +36,7 @@ Next, simply just `cd` into the project folder:
 From here, you can use `cargo` to build and run
 any of the examples individually.
 
-In particular, here's a simple example of running `my_example.rs`:
+In particular, here's a sample usage of running `examples/my_example.rs`:
 
 ```shell
 ❯❯ cargo run --example my_example
