@@ -6,11 +6,10 @@ Powered by [Cookiecutter](https://github.com/audreyr/cookiecutter), Cookiecutter
 
 ## Features
 
-- Generous `Makefile` with management commands
+- TODO
 
 ## Optional Integrations
 
-- If docker is used adds docker management commands to makefile
 - Option of TravisCI or None
 
 ## Usage

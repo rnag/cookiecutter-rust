@@ -38,18 +38,6 @@ def init_git():
         git.wait()
 
 
-def remove_docker_files():
-    """
-    Removes files needed for docker if it isn't going to be used
-    """
-    for filename in ["Dockerfile"]:
-        path = os.path.join(
-            PROJECT_DIRECTORY, filename
-        )
-        
-        if os.path.exists(path):
-            os.remove(path)
-
 # remove service specific files if we're writing a library
 if '{{ cookiecutter.project_type }}'.lower() == 'library':
     remove_file('src/main.rs')
