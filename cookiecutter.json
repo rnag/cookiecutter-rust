@@ -1,10 +1,12 @@
 {
-    "project_name": "my-rust-project",
     "full_name": "Ritvik Nag",
     "email": "rv.kvetch@gmail.com",
     "github_username": "rnag",
+    "project_name": "my-rust-project",
     "project_short_description": "A Rust project.",
     "project_type": ["library", "service"],
+    "version": "0.1.0",
     "use_ci": ["github", null],
+    "create_author_file": "y",
     "open_source_license": ["MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "GNU General Public License v3", "Not open source"]
 }

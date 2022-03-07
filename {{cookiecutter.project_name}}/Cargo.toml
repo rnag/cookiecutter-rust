@@ -7,16 +7,12 @@
 } %}
 [package]
 name = "{{ cookiecutter.project_name }}"
-version = "0.1.0"
-description = "{{ cookiecutter.project_short_description }}"
-repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
+version = "{{ cookiecutter.version }}"
 authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
+description = "{{ cookiecutter.project_short_description }}"
+documentation = "https://docs.rs/{{ cookiecutter.project_name }}"
+repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
 readme = "README.md"
-{%- if cookiecutter.open_source_license in license_names %}
-license = "{{ license_names[cookiecutter.open_source_license] }}"
-{%- else %}
-license = "MIT OR Apache-2.0"
-{%- endif %}
 keywords = ["{{cookiecutter.project_name}}",
             # some ideas:
             #   "logging",
@@ -26,7 +22,17 @@ keywords = ["{{cookiecutter.project_name}}",
 categories = [
     # "api-bindings"
 ]
+{%- if cookiecutter.open_source_license in license_names %}
+license = "{{ license_names[cookiecutter.open_source_license] }}"
+{%- else %}
+license = "MIT OR Apache-2.0"
+{%- endif %}
 edition = "2021"
+exclude = [
+    # (optional) list any files we don't want to publish to crates.io
+    # for example, assume the below is a folder which contains large `mp4` files:
+    #   "examples/assets"
+]
 
 # See here for more info: https://blog.rust-lang.org/2020/03/15/docs-rs-opt-into-fewer-targets.html
 

@@ -14,7 +14,7 @@
 //!
 //! <br>
 //!
-//! ## Example
+//! ## Usage
 //!
 //! ```no_run
 //! use {{ cookiecutter.project_name.replace('-', '_') }}::*;
@@ -32,7 +32,14 @@
 //! You can check out sample usage of this crate in the [examples/](https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}/tree/main/examples)
 //! folder in the project repo on GitHub.
 //!
-
+//! ## Readme Docs
+//!
+//! You can find the crate's readme documentation on the
+//! [crates.io] page, or alternatively in the [`README.md`] file on the GitHub project repo.
+//!
+//! [crates.io]: https://crates.io/crates/{{cookiecutter.project_name}})
+//! [`README.md`]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}})
+//!
 #[cfg(test)]
 mod tests {
     #[test]

@@ -96,30 +96,36 @@ If you are proposing a feature:
 Ready to contribute? Here's how to set up `{{ cookiecutter.project_name }}` for local development.
 
 1. Fork the `{{ cookiecutter.project_name }}` repo on GitHub.
-2. Clone your fork locally::
-
+2. Clone your fork locally:
+    ```shell
     $ git clone git@github.com:your_name_here/{{ cookiecutter.project_name }}.git
-
-3. Create a branch for local development::
-
+    ```
+3. Create a branch for local development:
+    ```shell
     $ git checkout -b name-of-your-bugfix-or-feature
-
+    ```
    Now you can make your changes locally.
 
-4. When you're done making changes, check that your changes pass the tests::
-
+4. When you're done making changes, check that your changes pass the tests:
+    ```shell
     $ cargo test
+    ```
+5. If necessary, create a new Rust script under the `examples/` folder which
+   demonstrates usage of the new feature.
 
-6. Commit your changes and push your branch to GitHub::
-
+   Then, run the new example script to confirm that it works as intended:
+    ```shell
+    $ cargo run --example my_awesome_example
+    ```
+6. Commit your changes and push your branch to GitHub:
+    ```shell
     $ git add .
     $ git commit -m "Your detailed description of your changes."
     $ git push origin name-of-your-bugfix-or-feature
-
+    ```
 7. Submit a pull request through the GitHub website.
 
-Pull Request Guidelines
------------------------
+## Pull Request Guidelines
 
 Before you submit a pull request, check that it meets these guidelines:
 
@@ -127,3 +133,17 @@ Before you submit a pull request, check that it meets these guidelines:
 2. If the pull request adds functionality, the docs should be updated. Put
    your new functionality into a function with a docstring, and add the
    feature to the list in README.md.
+
+## Deploying
+
+A reminder for the maintainers on how to deploy.
+Make sure all your changes are committed (including an entry in `CHANGELOG.md`).
+Then run:
+```shell
+$ cargo bump patch --git-tag # possible: major / minor / patch
+$ git push
+$ git push --tags
+```
+
+GitHub Actions will then deploy to [crates.io](https://crates.io/) if tests pass,
+once code is merged to the `main` branch.

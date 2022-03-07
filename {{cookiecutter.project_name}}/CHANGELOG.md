@@ -10,8 +10,14 @@ Possible header types:
 - `Breaking Changes` for any backwards-incompatible changes.
 
 ## [Unreleased]
+<!--
+### Features
+- Added a new struct `MyStruct` with the following methods:
+  - `my_method()`
+  - `other_method()`
+-->
 
-## v0.1.0 ({% now 'local', '%Y-%m-%d' %})
+## v{{ cookiecutter.version }} ({% now 'local', '%Y-%m-%d' %})
 
 - Initial Release on [crates.io] :tada:
 
