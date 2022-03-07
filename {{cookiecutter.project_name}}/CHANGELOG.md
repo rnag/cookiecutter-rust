@@ -11,7 +11,7 @@ Possible header types:
 
 ## [Unreleased]
 
-## v0.1.0 ({{ date.strftime('%Y-%m-%d' }})
+## v0.1.0 ({% now 'local', '%Y-%m-%d' %})
 
 - Initial Release on [crates.io] :tada:
 

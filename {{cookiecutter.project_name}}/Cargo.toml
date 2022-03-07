@@ -1,3 +1,10 @@
+{%- set license_names = {
+    'MIT license': 'MIT',
+    'BSD license': 'BSD-2-Clause',
+    'ISC license': 'ISC',
+    'Apache Software License 2.0': 'Apache-2.0',
+    'GNU General Public License v3': 'GPL-2.0-or-later'
+} %}
 [package]
 name = "{{ cookiecutter.project_name }}"
 version = "0.1.0"
@@ -5,7 +12,11 @@ description = "{{ cookiecutter.project_short_description }}"
 repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
 authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
 readme = "README.md"
-license = "MIT"
+{%- if cookiecutter.open_source_license in license_names %}
+license = "{{ license_names[cookiecutter.open_source_license] }}"
+{%- else %}
+license = "MIT OR Apache-2.0"
+{%- endif %}
 keywords = ["{{cookiecutter.project_name}}",
             # some ideas:
             #   "logging",
