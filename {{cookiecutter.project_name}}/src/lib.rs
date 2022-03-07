@@ -20,7 +20,7 @@
 //! use {{ cookiecutter.project_name.replace('-', '_') }}::*;
 //!
 //! #[tokio::main]
-//! async fn main() -> std::result::Result<(), Box<dyn std::error::Error + Send + Sync>> {
+//! async fn main() -> Result<(), Box<dyn std::error::Error>> {
 //!     println!("Hello world!");
 //!
 //!     Ok(())
