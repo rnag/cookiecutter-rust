@@ -39,7 +39,7 @@ def init_git():
     GIT_COMMANDS = [
         ["git", "init"],
         ["git", "add", "."],
-        ["git", "commit", "-a", "-m", "Initial Commit."]
+        ["git", "commit", "-a", "-m", "Initial Commit"]
     ]
 
     for command in GIT_COMMANDS:
@@ -50,10 +50,14 @@ def init_git():
 # remove service specific files if we're writing a library
 if '{{ cookiecutter.project_type }}'.lower() == 'library':
     remove_file('src/main.rs')
-    
+
 # 4. Remove unused ci choice
-if '{{ cookiecutter.use_ci}}'.lower() != 'github':
+if '{{ cookiecutter.use_ci}}'.lower() != 'gh-actions':
     remove_dir(".github")
 
-# 5. Initialize Git (should be run after all file have been modified or deleted)
+# 5. Remove unused authors file
+if '{{ cookiecutter.create_author_file }}' != 'y':
+    remove_file('AUTHORS.md')
+
+# 6. Initialize Git (should be run after all file have been modified or deleted)
 init_git()
