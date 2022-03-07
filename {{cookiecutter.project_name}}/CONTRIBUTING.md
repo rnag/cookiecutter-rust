@@ -5,7 +5,7 @@ guidelines for this repo. Here's what you need to know!
 
 ## License
 
-**{{cookiecutter.project_name}}** is proudly licenced under the MIT license, and so are all
+**{{cookiecutter.project_name}}** is proudly licenced under the {{ cookiecutter.open_source_license }}, and so are all
 contributions. Please see the [`LICENSE`] file in this directory for more details.
 
 [`LICENSE`]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}/blob/main/LICENSE

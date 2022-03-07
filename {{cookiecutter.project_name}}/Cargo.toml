@@ -1,6 +1,46 @@
 [package]
-name = "{{cookiecutter.project_name}}"
+name = "{{ cookiecutter.project_name }}"
 version = "0.1.0"
+description = "{{ cookiecutter.project_short_description }}"
+repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}"
 authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
+readme = "README.md"
+license = "MIT"
+keywords = ["{{cookiecutter.project_name}}",
+            # some ideas:
+            #   "logging",
+            #   "api",
+            #   "async",
+            ]
+categories = [
+    # "api-bindings"
+]
+edition = "2021"
+
+# See here for more info: https://blog.rust-lang.org/2020/03/15/docs-rs-opt-into-fewer-targets.html
+
+[package.metadata.docs.rs]
+all-features = true
+targets = ["x86_64-unknown-linux-gnu"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+[dev-dependencies]
+# version_sync: to ensure versions in `Cargo.toml` and `README.md` are in sync
+version-sync = "0.9.4"
+# cargo-bump: to bump package version and tag a commit at the same time.
+# actually, the docs recommend installing this globally:
+#   $ cargo install cargo-bump
+# cargo-bump = "1.1.0"
+pretty_env_logger = "0.4.0"
+# Some useful libraries - uncomment if needed :-)
+# tokio = { version = "1.16.1", features = ["macros", "rt-multi-thread"] }
+# tabled = "0.4.2"
+# indoc = "1.0.4"
+# criterion = "0.3.5"
+
+### FEATURES #################################################################
+
+[features]
