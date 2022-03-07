@@ -11,6 +11,7 @@ from io import open
 PATTERN = '{{(\s?cookiecutter)[.](.*?)}}'
 RE_OBJ = re.compile(PATTERN)
 
+
 @pytest.fixture
 def context():
     return {
@@ -18,12 +19,13 @@ def context():
         'full_name': 'Test Author',
         'email': 'me@example.com',
         'git_root': 'github.com',
-        'github_username': 'moogar0880',
+        'github_username': 'rnag',
         'project_short_description': 'A short description of the project.',
         'project_type': 'library',
-        'use_ci': 'travis',
+        'use_ci': 'github',
         'use_git': 'y',
-}
+    }
+
 
 def build_files_list(root_dir):
     """Build a list containing absolute paths to the generated files."""
@@ -32,6 +34,7 @@ def build_files_list(root_dir):
         for dirpath, subdirs, files in os.walk(root_dir)
         for file_path in files
     ]
+
 
 def check_paths(paths):
     """Method to check all paths have correct substitutions,
@@ -46,6 +49,7 @@ def check_paths(paths):
             msg = 'cookiecutter variable not replaced in {}'
             assert match is None, msg.format(path)
 
+
 def test_default_configuration(cookies, context):
     result = cookies.bake(extra_context=context)
     assert result.exit_code == 0, result.exception
@@ -57,10 +61,12 @@ def test_default_configuration(cookies, context):
     assert paths
     check_paths(paths)
 
+
 @pytest.fixture(params=['use_git'])
 def feature_context(request, context):
     context.update({request.param: 'n'})
     return context
+
 
 def test_disable_features(cookies, feature_context):
     result = cookies.bake(extra_context=feature_context)

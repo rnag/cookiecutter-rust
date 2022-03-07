@@ -23,6 +23,15 @@ def remove_file(filename):
         os.remove(fullpath)
 
 
+def remove_dir(filename):
+    """
+    generic remove folder (directory) from project dir
+    """
+    fullpath = os.path.join(PROJECT_DIRECTORY, filename)
+    if os.path.exists(fullpath):
+        shutil.rmtree(fullpath)
+
+
 def init_git():
     """
     Initializes git on the new project folder
@@ -43,8 +52,8 @@ if '{{ cookiecutter.project_type }}'.lower() == 'library':
     remove_file('src/main.rs')
     
 # 4. Remove unused ci choice
-if '{{ cookiecutter.use_ci}}'.lower() != 'travis':
-    remove_file(".travis.yml")
+if '{{ cookiecutter.use_ci}}'.lower() != 'github':
+    remove_dir(".github")
 
 # 5. Initialize Git (should be run after all file have been modified or deleted)
 if '{{ cookiecutter.use_git }}'.lower() == 'y':

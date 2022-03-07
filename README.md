@@ -10,7 +10,7 @@ Powered by [Cookiecutter](https://github.com/audreyr/cookiecutter), Cookiecutter
 
 ## Optional Integrations
 
-- Option of TravisCI or None
+- Option of GitHub Actions or None
 
 ## Usage
 
@@ -47,7 +47,7 @@ github_username [rnag]: rnag
 project_short_description [A Rust project.]: Rusty Echo Server
 use_git [y]: y
 Select use_ci:
-1 - travis
+1 - github
 2 - none
 Choose from 1, 2 [1]: 1
 ```
