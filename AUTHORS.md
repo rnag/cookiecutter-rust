@@ -2,9 +2,8 @@
 
 ## Development Lead
 
-- Luis Morales [lacion](https://github.com/lacion)
+- Ritvik Nag [rnag](https://github.com/rnag)
 
 ## Contributors
 
-- Damon Zhao [se77en](https://github.com/se77en)
-- Tim Mathews [timmathew](https://github.com/timmathews)
+- TODO
