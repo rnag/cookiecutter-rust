@@ -6,11 +6,14 @@ Powered by [Cookiecutter](https://github.com/audreyr/cookiecutter), Cookiecutter
 
 ## Features
 
-- TODO
+- Choice of setting up a *library* or *service* (binary with a `src/main.rs`)
+- Generation of `examples/` and `tests/` folders
 
 ## Optional Integrations
 
-- Option of GitHub Actions or None
+- Option of [GitHub Actions] or None
+
+[GitHub Actions]: https://github.com/features/actions
 
 ## Usage
 
@@ -39,15 +42,29 @@ Warning: After this point, change 'Ritvik Nag', 'rnag', etc to your own informat
 
 Answer the prompts with your own desired [options](). For example:
 ```console
-project_name [myrustproject]: echoserver
-full_name [Ritvik Nag]: Ritvik Nag
-email [rv.kvetch@gmail.com]: rv.kvetch@gmail.com
-github_username [rnag]: rnag
+full_name [Ritvik Nag]: Jon Smitty
+email [rv.kvetch@gmail.com]: me@my-email.com
+github_username [rnag]: jschmidt
+project_name [my-rust-project]: echoserver
 project_short_description [A Rust project.]: Rusty Echo Server
+Select project_type:
+1 - library
+2 - service
+Choose from 1, 2 [1]:
+version [0.1.0]:
 Select use_ci:
-1 - github
-2 - none
-Choose from 1, 2 [1]: 1
+1 - gh-actions
+2 - None
+Choose from 1, 2 [1]:
+create_author_file [y]: n
+Select open_source_license:
+1 - MIT license
+2 - BSD license
+3 - ISC license
+4 - Apache Software License 2.0
+5 - GNU General Public License v3
+6 - Not open source
+Choose from 1, 2, 3, 4, 5, 6 [1]:
 ```
 
 Enter the project and take a look around:
@@ -56,9 +73,9 @@ $ cd echoserver/
 $ ls
 ```
 
-Run `make help` to see the available management commands, or just run `make build` to build your project.
+Run `cargo test` to run unit tests, or just run `cargo build` to build your project.
 ```console
-$ make help
-$ make build
-$ ./bin/echoserver
+$ cargo test
+$ cargo build --release
+$ ./target/release/echoserver
 ```
