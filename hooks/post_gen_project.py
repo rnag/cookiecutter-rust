@@ -56,7 +56,4 @@ if '{{ cookiecutter.use_ci}}'.lower() != 'github':
     remove_dir(".github")
 
 # 5. Initialize Git (should be run after all file have been modified or deleted)
-if '{{ cookiecutter.use_git }}'.lower() == 'y':
-    init_git()
-else:
-    remove_file(".gitignore")
+init_git()

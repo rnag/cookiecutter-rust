@@ -2,7 +2,7 @@
 
 ## Development Lead
 
-- {{ cookiecutter.full_name }} [{{ cookiecutter.github_username }}](https://{{cookiecutter.git_root}}/{{ cookiecutter.github_username }})
+- {{ cookiecutter.full_name }} [{{ cookiecutter.github_username }}](https://github.com/{{ cookiecutter.github_username }})
 
 ## Contributors
 

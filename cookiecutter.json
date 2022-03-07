@@ -1,11 +1,9 @@
 {
-    "project_name": "myrustproject",
+    "project_name": "my-rust-project",
     "full_name": "Ritvik Nag",
     "email": "rv.kvetch@gmail.com",
-    "git_root": "github.com",
     "github_username": "rnag",
     "project_short_description": "A Rust project.",
     "project_type": ["library", "service"],
-    "use_ci": ["github", null],
-    "use_git": "y"
+    "use_ci": ["github", null]
 }

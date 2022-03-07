@@ -42,10 +42,8 @@ Answer the prompts with your own desired [options](). For example:
 project_name [myrustproject]: echoserver
 full_name [Ritvik Nag]: Ritvik Nag
 email [rv.kvetch@gmail.com]: rv.kvetch@gmail.com
-git_root [github.com]: github.com
 github_username [rnag]: rnag
 project_short_description [A Rust project.]: Rusty Echo Server
-use_git [y]: y
 Select use_ci:
 1 - github
 2 - none

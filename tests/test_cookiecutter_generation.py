@@ -18,12 +18,10 @@ def context():
         'project_name': 'MyTestProject',
         'full_name': 'Test Author',
         'email': 'me@example.com',
-        'git_root': 'github.com',
         'github_username': 'rnag',
         'project_short_description': 'A short description of the project.',
         'project_type': 'library',
         'use_ci': 'github',
-        'use_git': 'y',
     }
 
 
@@ -62,10 +60,10 @@ def test_default_configuration(cookies, context):
     check_paths(paths)
 
 
-@pytest.fixture(params=['use_git'])
-def feature_context(request, context):
-    context.update({request.param: 'n'})
-    return context
+# @pytest.fixture(params=['use_git'])
+# def feature_context(request, context):
+#     context.update({request.param: 'n'})
+#     return context
 
 
 def test_disable_features(cookies, feature_context):

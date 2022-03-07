@@ -1,14 +1,62 @@
 # Contributing
 
-Contributions are welcome, and they are greatly appreciated! Every little bit helps, and credit will always be given.
+You want to help contribute? Awesome! Thanks for taking the time to look at the
+guidelines for this repo. Here's what you need to know!
 
-You can contribute in many ways:
+## License
+
+**{{cookiecutter.project_name}}** is proudly licenced under the MIT license, and so are all
+contributions. Please see the [`LICENSE`] file in this directory for more details.
+
+[`LICENSE`]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}/blob/main/LICENSE
+
+## Pull Requests
+
+To make changes to **{{cookiecutter.project_name}}**, please send in pull requests on GitHub to
+the `main` branch. I'll review them and either merge or request changes. GitHub Actions
+tests everything as well, so you may get feedback from it too.
+
+If you make additions or other changes to a pull request, feel free to either amend
+previous commits or only add new ones, however you prefer. I may ask you to squash
+your commits before merging, depending.
+
+## Issue Tracker
+
+You can find the issue tracker [on
+GitHub](https://github.com/{{ cookiecutter.github_username }}/{{cookiecutter.project_name}}/issues). If you've found a
+problem with **{{cookiecutter.project_name}}**, please open an issue there.
+
+<!--
+We use the following labels:
+
+* `enhancement`: This is for any request for new sections or functionality.
+* `bug`: This is for anything that's in `{{cookiecutter.project_name}}`, but incorrect or not working.
+* `discussion`: A discussion about improving something in `{{cookiecutter.project_name}}`; this may
+* lead to new enhancement or bug issues.
+-->
+
+## Development workflow
+
+Check out the `README.md` under the [examples/ folder](examples/README.md) for details
+on the development process.
+
+## Examples
+Do you want to help show off some ways for how the library works? Feel free to
+work on an example and open up a PR!
+
+[install Rust]: http://rust-lang.org/install.html
+
+To run the tests:
+
+```bash
+$ cargo test
+```
 
 ## Types of Contributions
 
 ### Report Bugs
 
-Report bugs at https://{{cookiecutter.git_root}}/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/issues.
+Report bugs at https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}/issues.
 
 If you are reporting a bug, please include:
 
@@ -16,7 +64,7 @@ If you are reporting a bug, please include:
 * Any details about your local setup that might be helpful in troubleshooting.
 * Detailed steps to reproduce the bug.
 
-### Fix Bugs
+### Fix Bug
 
 Look through the GitHub issues for bugs. Anything tagged with "bug"
 is open to whoever wants to implement it.
@@ -60,7 +108,7 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_name }}` for 
 
 4. When you're done making changes, check that your changes pass the tests::
 
-    $ make test
+    $ cargo test
 
 6. Commit your changes and push your branch to GitHub::
 

@@ -1,1 +1,5 @@
-target/
+/target
+{%- if cookiecutter.project_type.lower() == 'library' -%}
+Cargo.lock
+{%- endif %}
+.idea
