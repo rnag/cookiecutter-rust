@@ -11,12 +11,12 @@ on:
 
 # After you create the GitHub repo, head over to `crates.io` and create
 # an API Token, or use the link below:
-#   https://crates.io/settings/tokens
+#   <https://crates.io/settings/tokens>
 #
-# Once you have an API token, add it as a Repository Secret under the
-# GitHub repo, so that it can be used by GitHub Actions to deploy to
-# `crates.io` whenever a new tag is pushed to GitHub:
-#   https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}/settings/secrets/actions/new
+# Once you have an API token, add it as a Repository Secret (CARGO_TOKEN)
+# under the GitHub repo, so that it can be used by GitHub Actions to deploy
+# to `crates.io` whenever a new tag is pushed to GitHub:
+#   <https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}/settings/secrets/actions/new>
 jobs:
   publish:
     runs-on: ubuntu-latest
