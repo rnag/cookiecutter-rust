@@ -50,6 +50,9 @@ def init_git():
 # remove service specific files if we're writing a library
 if '{{ cookiecutter.project_type }}'.lower() == 'library':
     remove_file('src/main.rs')
+else:
+    # remove service specific files if we're *not* writing a library
+    remove_file('.github/workflows/publish.yml')
 
 # 4. Remove unused ci choice
 if '{{ cookiecutter.use_ci}}'.lower() != 'gh-actions':
