@@ -138,11 +138,18 @@ Before you submit a pull request, check that it meets these guidelines:
 
 A reminder for the maintainers on how to deploy.
 Make sure all your changes are committed (including an entry in `CHANGELOG.md`).
+
+*First-time only*: to update `git push` to push both the commits and tags simultaneously, run this command
+as mentioned in [this post](https://stackoverflow.com/questions/3745135/push-git-commits-tags-simultaneously):
+
+```shell
+$ git config --global push.followTags true
+```
+
 Then run:
 ```shell
 $ cargo bump patch --git-tag # possible: major / minor / patch
 $ git push
-$ git push --tags
 ```
 
 GitHub Actions will then deploy to [crates.io](https://crates.io/) if tests pass,
