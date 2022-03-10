@@ -33,12 +33,12 @@ $ brew install cookiecutter
 
 finally to run it based on this template just:
 ```console
-$ cookiecutter https://github.com/rnag/cookiecutter-rust.git
+$ cookiecutter gh:rnag/cookiecutter-rust
 ```
 
 You will be asked about your basic info (name, project name, app name, etc.). This info will be used to customize your new project.
 
-Warning: After this point, change 'Ritvik Nag', 'rnag', etc to your own information.
+> Warning: After this point, change 'Ritvik Nag', 'rnag', etc to your own information.
 
 Answer the prompts with your own desired [options](). For example:
 ```console
