@@ -37,8 +37,8 @@
 //! You can find the crate's readme documentation on the
 //! [crates.io] page, or alternatively in the [`README.md`] file on the GitHub project repo.
 //!
-//! [crates.io]: https://crates.io/crates/{{cookiecutter.project_name}})
-//! [`README.md`]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}})
+//! [crates.io]: https://crates.io/crates/{{cookiecutter.project_name}}
+//! [`README.md`]: https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}
 //!
 
 #[cfg(test)]
