@@ -11,23 +11,7 @@ First, start out by cloning the GitHub project:
 ❯❯ git clone https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}}.git
 ```
 
-When running the examples, we'll often want to see the DEBUG logs from the library under test,
-`{{cookiecutter.project_name}}` in this case. Therefore, remember to ensure that the **RUST_LOG** env variable
-is properly set.
-
-For example, on *Mac/Linux*:
-
-```shell
-❯❯ export RUST_LOG='{{ cookiecutter.project_name.replace('-', '_') }}=TRACE'
-```
-
-On *Windows*:
-
-```shell
-❯❯ $env:RUST_LOG='{{ cookiecutter.project_name.replace('-', '_') }}=TRACE'
-```
-
-Next, simply just `cd` into the project folder:
+Then, simply `cd` into the project folder:
 
 ```shell
 ❯❯ cd {{cookiecutter.project_name}}
