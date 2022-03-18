@@ -1,7 +1,9 @@
 #![deny(warnings)]
 #![warn(rust_2018_idioms)]
 
-// use log::{debug, info, error};
+#[macro_use]
+extern crate log;
+
 // use std::time::Instant;
 
 use {{ cookiecutter.project_name.replace('-', '_') }}::*;
@@ -14,7 +16,7 @@ async fn main() -> Result<()> {
     sensible_env_logger::init!();
 
     // TODO
-    println!("Hello world!");
+    trace!("Hello world!");
 
     Ok(())
 }
