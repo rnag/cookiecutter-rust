@@ -1,6 +1,6 @@
-// #![deny(warnings)]
-// #![warn(rust_2018_idioms)]
-// #![warn(missing_docs)]
+#![doc(html_root_url = "https://docs.rs/{{ cookiecutter.project_name }}/{{ cookiecutter.version }}")]
+#![warn(rust_2018_idioms, missing_docs)]
+#![deny(warnings, dead_code, unused_imports, unused_mut)]
 
 //! [![github]](https://github.com/{{cookiecutter.github_username}}/{{cookiecutter.project_name}})&ensp;[![crates-io]](https://crates.io/crates/{{cookiecutter.project_name}})&ensp;[![docs-rs]](https://docs.rs/{{cookiecutter.project_name}})
 //!
