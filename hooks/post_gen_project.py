@@ -53,6 +53,7 @@ if '{{ cookiecutter.project_type }}'.lower() == 'library':
 else:
     # remove service specific files if we're *not* writing a library
     remove_file('.github/workflows/publish.yml')
+    remove_file('.github/workflows/release.yml')
 
 # 4. Remove unused ci choice
 if '{{ cookiecutter.use_ci}}'.lower() != 'gh-actions':
