@@ -49,8 +49,7 @@ targets = ["x86_64-unknown-linux-gnu"]
 version-sync = "0.9.4"
 # cargo-bump: to bump package version and tag a commit at the same time.
 # actually, the docs recommend installing this globally:
-#   $ cargo install cargo-bump
-# cargo-bump = "1.1.0"
+#   $ git clone https://github.com/rnag/cargo-bump && cd cargo-bump && cargo install --path . && cd .. && rm -rf cargo-bump
 # logging utilities
 log = "^0.4"
 sensible-env-logger = "0.1.0"
